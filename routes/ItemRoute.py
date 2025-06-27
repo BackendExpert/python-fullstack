@@ -4,7 +4,6 @@ from models.Items import Item
 
 router = APIRouter()
 
-router.post('/')
-
+@router.post('/add_item')
 async def create_item(item: Item):
-    return add_Item(item)
+    return await add_Item(item)
